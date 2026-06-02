@@ -1,7 +1,10 @@
 # Portfolio Website
 
-My personal portfolio website showcasing my projects, skills, and experience.
+Welcome to my personal portfolio website.
 
-Built to serve as a central place for my work and contact information.
-
-Open to feedback and suggestions.
+This site showcases my projects, technical skills, and experiences.
+It serves as a central hub for my work, achievements, and learning journey.
+You'll find details about my development, AI/ML, and open-source projects.
+The portfolio is regularly updated as I build new projects and gain experience.
+Feel free to explore the repository and share feedback or suggestions.
+Thank you for visiting.
