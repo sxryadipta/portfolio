@@ -1,3 +1,13 @@
+const toggle = document.getElementById("theme-toggle");
+const img = document.getElementById("hero-img");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.contains("dark");
+  img.src = isDark ? img.dataset.dark : img.dataset.light;
+  toggle.textContent = isDark ? "Light" : "Dark";
+});
+
 const DEV_TO_USERNAME = "sxryadipta"; 
 
 async function loadArticles() {
