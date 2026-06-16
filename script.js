@@ -8,16 +8,27 @@ toggle.addEventListener("click", () => {
   toggle.textContent = isDark ? "Light" : "Dark";
 });
 
-const DEV_TO_USERNAME = "sxryadipta"; 
+
+
+
+
 
 async function loadArticles() {
-  const container = document.getElementById("dev-articles");
-  const res = await fetch(
-    `https://dev.to/api/articles?username=${DEV_TO_USERNAME}&per_page=5`
-  );
-  const articles = await res.json();
-  container.innerHTML = articles.map(a => `<samp><a href="${a.url}">${a.title}</a></samp>`).join("<br>");
-   
+  const res = await fetch('/api/articles')
+  const articles = await res.json()
+
+  const inner = document.getElementById('dragger-inner')
+  inner.innerHTML = articles.map(a => `
+    <div class="card">
+      <span class="card-tag tag-article">Article</span>
+      <p class="card-title">${a.title}</p>
+      <p class="card-desc">${a.description ?? ''}</p>
+      <div class="card-footer">
+        <span class="card-meta">${a.readTime} min read</span>
+        <a href="${a.url}" target="_blank" rel="noopener">Read →</a>
+      </div>
+    </div>
+  `).join('')
 }
 
 document.addEventListener("DOMContentLoaded", loadArticles);
