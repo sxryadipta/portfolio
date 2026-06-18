@@ -42,11 +42,9 @@ const schema = {
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Web",
       "description": "Automated GitHub README stats generator that fetches and displays real-time Chess.com game statistics every 6 hours.",
-      "browserRequirements": "Requires HTML5 compatible browser.",
       "creator": {
         "@id": "https://portfolio-sxryadipta.vercel.app/#person"
-      },
-      "codeRepository": "https://github.com/sxryadipta/chess-readme-stats"
+      }
     }
   ]
 }
