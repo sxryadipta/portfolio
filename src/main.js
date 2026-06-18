@@ -1,23 +1,77 @@
+import './styles/main.css'
 import { injectSchema } from './data/schema.js'
-import { renderHero } from './components/hero.js'
-import { renderSkills } from './components/skills.js'
 import { renderProjects } from './components/projects.js'
 import { renderArticles } from './components/articles.js'
 
 
-// Inject JSON-LD schema into <head>
 injectSchema()
 
 const app = document.getElementById('app')
 
 app.innerHTML = `
-  ${renderHero()}
-  ${renderSkills()}
-  <section id="projects"><h2>Projects</h2><div id="projects-list">Loading...</div></section>
-  <section id="articles"><h2>Articles</h2><div id="articles-list">Loading...</div></section>
-  <section id="substack"><h2>Newsletter</h2><div id="substack-list">Loading...</div></section>
+  <div class="portfolio">
+
+    <nav>
+      <span class="logo">portfolio-sxryadipta.vercel.app/</span>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#articles">Articles</a>
+        <a href="#newsletter">Newsletter</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-tag">Backend engineer</div>
+      <h1>Suryadipta Ghosh</h1>
+      <p>Building reliable APIs and backend systems. Currently exploring distributed systems and open-source tooling.</p>
+      <div class="hero-links">
+        <a class="btn btn-accent" href="https://github.com/sxryadipta" target="_blank">GitHub</a>
+        <a class="btn" href="https://dev.to/sxryadipta" target="_blank">Dev.to</a>
+        <a class="btn" href="https://sxryadipta.substack.com" target="_blank">Substack</a>
+      </div>
+    </div>
+
+    <section id="skills">
+      <div class="section-label">skills</div>
+      <div class="skills-grid">
+        <span class="skill-pill accent">Node.js</span>
+        <span class="skill-pill accent">JavaScript</span>
+        <span class="skill-pill accent">PostgreSQL</span>
+        <span class="skill-pill">Docker</span>
+        <span class="skill-pill">REST APIs</span>
+        <span class="skill-pill">Git</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-label">Projects</div>
+      <div class="cards-grid" id="projects-list">
+        <div class="card"><div class="card-desc">Loading...</div></div>
+      </div>
+    </section>
+
+    <section id="articles">
+      <div class="section-label">Articles</div>
+      <div id="articles-list">
+        <div class="article-card"><div class="article-title">Loading...</div></div>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="section-label">Newsletter</div>
+      <div id="substack-list">
+        <div class="article-card"><div class="article-title">Loading...</div></div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Built with vite</span>
+      <span>© ${new Date().getFullYear()}</span>
+    </footer>
+
+  </div>
 `
 
-// Mount async components after DOM is ready
 renderProjects('projects-list')
 renderArticles('articles-list')
+renderSubstack('substack-list')
