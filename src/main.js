@@ -12,7 +12,7 @@ app.innerHTML = `
   <div class="portfolio">
 
     <nav>
-      <span class="logo">portfolio-sxryadipta.vercel.app/</span>
+      <span class="logo">portfolio-sxryadipta</span>
       <div class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#articles">Articles</a>
@@ -26,8 +26,8 @@ app.innerHTML = `
       <p>Building reliable APIs and backend systems. Currently exploring distributed systems and open-source tooling.</p>
       <div class="hero-links">
         <a class="btn btn-accent" href="https://github.com/sxryadipta" target="_blank">GitHub</a>
-        <a class="btn" href="https://dev.to/sxryadipta" target="_blank">Dev.to</a>
-        <a class="btn" href="https://sxryadipta.substack.com" target="_blank">Substack</a>
+        <a class="btn btn-accent" href="https://dev.to/sxryadipta" target="_blank">Dev.to</a>
+        <a class="btn btn-accent" href="https://sxryadipta.substack.com" target="_blank">Substack</a>
       </div>
     </div>
 
@@ -37,9 +37,9 @@ app.innerHTML = `
         <span class="skill-pill accent">Node.js</span>
         <span class="skill-pill accent">JavaScript</span>
         <span class="skill-pill accent">PostgreSQL</span>
-        <span class="skill-pill">Docker</span>
-        <span class="skill-pill">REST APIs</span>
-        <span class="skill-pill">Git</span>
+        <span class="skill-pill accent">Docker</span>
+        <span class="skill-pill accent">REST APIs</span>
+        <span class="skill-pill accent">Git</span>
       </div>
     </section>
 
