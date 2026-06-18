@@ -294,3 +294,13 @@ code {
     border-right-color: var(--border);
   }
 }
+
+body {
+  background: #ffffff;
+  color: #111111;
+}
+
+body.dark {
+  background: #111111;
+  color: #f1f1f1;
+}
