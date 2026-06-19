@@ -102,13 +102,28 @@ section { margin-bottom: 3.5rem; }
 
 </*Code ends*/>
 
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
-.card { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; text-decoration: none; color: var(--text); display: block; }
+/* replace the old .cards-grid, .card, .card-title, .card-desc, .card-meta rules with these */
+
+.cards-grid { display: flex; flex-direction: column; gap: 16px; }
+
+.card { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.4rem; text-decoration: none; color: var(--text); display: flex; flex-direction: row; gap: 1.5rem; align-items: flex-start; }
 .card:hover { border-color: #444; }
-.card-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
-.card-desc { font-size: 12px; color: var(--muted); margin-bottom: 10px; line-height: 1.5; }
-.card-meta { font-size: 11px; color: #555; display: flex; gap: 10px; }
-.card-meta span { color: var(--accent); }
+
+.card-body { display: flex; flex-direction: column; flex: 1; }
+
+.card-header { border-left: 2px solid var(--accent); padding-left: 1rem; margin-bottom: 0.75rem; }
+.card-title { font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
+.card-type { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.card-desc { font-size: 12px; color: var(--muted); line-height: 1.6; margin: 0.5rem 0 0.75rem; }
+
+.card-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 0.75rem; }
+.card-link { font-size: 12px; padding: 5px 12px; border-radius: 6px; border: 0.5px solid var(--border); background: transparent; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
+.card-link:hover { border-color: #555; }
+.card-link.primary { background: var(--accent); color: #0e0e0e; border-color: var(--accent); font-weight: 500; }
+
+.card-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.5rem; }
+.card-meta span { font-size: 11px; padding: 3px 10px; border-radius: 20px; background: var(--bg3); border: 0.5px solid var(--border); color: var(--muted); }
 
 .article-card { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; margin-bottom: 8px; text-decoration: none; color: var(--text); display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
 .article-card:hover { border-color: #444; }
