@@ -44,6 +44,8 @@ app.innerHTML = `
         </div> 
       </section>
 
+      
+
 
       <section id="projects">
         <div class="section-label">Projects</div>
