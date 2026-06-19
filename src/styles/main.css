@@ -88,7 +88,7 @@ section { margin-bottom: 3.5rem; }
 .skill-pill { font-size: 12px; padding: 5px 12px; border-radius: 20px; background: var(--bg3); border: 0.5px solid var(--border); color: var(--muted); }
 .skill-pill.accent { background: #1c1100; border-color: var(--accent-dim); color: var(--accent); }
 
-</*New code*/>
+/*New code*/
 
 .exp-card { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.4rem; margin-bottom: 12px; }
 .exp-card:hover { border-color: #444; }
@@ -100,7 +100,7 @@ section { margin-bottom: 3.5rem; }
 .exp-skills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.75rem; }
 .exp-skill { font-size: 11px; padding: 3px 10px; border-radius: 20px; background: var(--bg3); border: 0.5px solid var(--border); color: var(--muted); }
 
-</*Code ends*/>
+/*Code ends*/
 
 /* replace the old .cards-grid, .card, .card-title, .card-desc, .card-meta rules with these */
 
