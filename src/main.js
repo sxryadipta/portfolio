@@ -63,7 +63,7 @@ app.innerHTML = `
       <section id="articles">
         <div class="section-label">Articles</div>
         <div id="articles-list">
-          <div class="article-card"><div class="article-title">Loading...</div></div>
+          <div class="article-card"><div class="article-desc">Loading...</div></div>
         </div>
       </section>
 
