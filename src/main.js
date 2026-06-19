@@ -1,5 +1,6 @@
 import './styles/main.css'
 import { injectSchema } from './data/schema.js'
+import { renderExperience } from './components/experience.js'
 import { renderProjects } from './components/projects.js'
 import { renderArticles } from './components/articles.js'
 
@@ -44,7 +45,12 @@ app.innerHTML = `
         </div> 
       </section>
 
-      
+      <section id="experience">
+        <div class="section-label">Experience</div>
+        <div id="experience-list">
+          <div class="exp-card"><div class="exp-desc">Loading...</div></div>
+        </div>
+      </section>
 
 
       <section id="projects">
@@ -79,6 +85,7 @@ app.innerHTML = `
   </div>
 `
 
+renderExperience('experience-list')
 renderProjects('projects-list')
 renderArticles('articles-list')
 renderSubstack('substack-list')
