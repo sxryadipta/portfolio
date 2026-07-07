@@ -1,7 +1,28 @@
 @import "tailwindcss";
 
+
+
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./assets/fonts/montserrat-latin-wght-normal.woff2") format("woff2"),
+       url("./assets/fonts/montserrat-latin-ext-wght-normal.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./assets/fonts/montserrat-latin-wght-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --animate-marquee: marquee 25s linear infinite;
+  --font-custom: "MyCustomFont", sans-serif;
 }
 @keyframes marquee {
   from { transform: translateX(0); }
