@@ -1,30 +1,65 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [sent, setSent] = useState(false)
+export default function Blogs() {
+  const [posts, setPosts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // wire to Formspree/EmailJS/your own API route here
-    setSent(true)
-    setTimeout(() => setSent(false), 4000)
-  }
+  useEffect(() => {
+    fetch('https://dev.to/api/articles?username=sxryadipta')
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch')
+        return res.json()
+      })
+      .then((data) => setPosts(data.slice(0, 4))) // limit how many show
+      .catch((err) => {
+        console.error(err)
+        setError(true)
+      })
+      .finally(() => setLoading(false))
+  }, [])
 
   return (
-    <section id="contact" className="py-20 px-4 max-w-lg mx-auto">
-      <h3 className="text-center text-gray-400 mb-2">Let's talk</h3>
-      <h2 className="text-center text-3xl font-bold mb-6">Contact</h2>
-      <p className="text-center text-gray-400 mb-6">Have a question or a project in mind? Feel free to reach out.</p>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input name="name" placeholder="Name" value={form.name} onChange={handleChange} className="bg-transparent border border-gray-700 rounded px-4 py-2" required />
-        <input name="email" type="email" placeholder="Email" value={form.email} onChange={handleChange} className="bg-transparent border border-gray-700 rounded px-4 py-2" required />
-        <textarea name="message" placeholder="Message" value={form.message} onChange={handleChange} className="bg-transparent border border-gray-700 rounded px-4 py-2" rows={4} required />
-        <button className="bg-emerald-500 text-black font-semibold rounded px-4 py-2">Submit</button>
-      </form>
-      {sent && <p className="text-green-400 mt-4 text-center">✅ Thank you for your message!</p>}
+    <section id="blogs" className="py-20 px-4">
+      <h3 className="text-center text-gray-400 mb-2">My writing</h3>
+      <h2 className="text-center text-3xl font-bold mb-10">Blogs</h2>
+
+      {loading && <p className="text-center text-gray-400">Loading posts…</p>}
+      {error && (
+        <p className="text-center text-gray-400">
+          Couldn't load posts right now — check back later.
+        </p>
+      )}
+      {!loading && !error && posts.length === 0 && (
+        <p className="text-center text-gray-400">No posts published yet.</p>
+      )}
+
+      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {posts.map((post) => (
+          <a
+            key={post.id}
+            href={post.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-gray-700 rounded-xl overflow-hidden hover:shadow-lg hover:border-emerald-400 transition"
+          >
+            {post.cover_image && (
+              <img
+                src={post.cover_image}
+                alt={post.title}
+                className="w-full h-40 object-cover"
+              />
+            )}
+            <div className="p-4">
+              <h4 className="font-semibold mb-1">{post.title}</h4>
+              <p className="text-sm text-gray-400 line-clamp-2">{post.description}</p>
+              <span className="text-xs text-gray-500 mt-2 block">
+                {new Date(post.published_at).toLocaleDateString()}
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
     </section>
   )
 }
