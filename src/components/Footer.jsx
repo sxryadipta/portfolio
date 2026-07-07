@@ -5,10 +5,10 @@ export default function Footer() {
       <p>Built with Vite · Styled with TailwindCSS · Deployed on Vercel</p>
       <iframe
         className="mx-auto mt-6 rounded-xl"
-        src="https://open.spotify.com/embed/playlist/YOUR_PLAYLIST_ID"
+        src="https://open.spotify.com/embed/playlist/2ln7fm5BElWvMWDGEj6Jz3"
         width="300" height="80" allow="encrypted-media"
       />
-      <p className="mt-4">Copyright © {new Date().getFullYear()} Your Name. All rights reserved.</p>
+      <p className="mt-4">Copyright © {new Date().getFullYear()} Sryadipta Ghosh. All rights reserved.</p>
     </footer>
   )
 }
