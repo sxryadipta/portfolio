@@ -1,0 +1,16 @@
+{
+  "photoSlugPattern": "suryadipta-ghosh[-context]",
+  "imageFilenamePattern": "suryadipta-ghosh[-context]-[year].jpg",
+  "ogImageFilenamePattern": "suryadipta-ghosh[-context]-og.jpg",
+  "examples": [
+    "suryadipta-ghosh-portrait-2026.jpg",
+    "suryadipta-ghosh-chandigarh-2026.jpg",
+    "suryadipta-ghosh-developer-2026.jpg"
+  ],
+  "rules": [
+    "Always lead with 'suryadipta-ghosh', never a variant spelling",
+    "Context word should be descriptive (location, activity, occasion), not generic (img1, photo2)",
+    "No dates in slugs (paths should be evergreen); dates only in filenames/metadata",
+    "Alt text describes subject + context in a natural sentence, no keyword stuffing"
+  ]
+}

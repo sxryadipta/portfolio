@@ -1,0 +1,8 @@
+<footer class="site-footer">
+  <p>&copy; {{ "now" | date("yyyy") }} {{ person.name }} (@{{ person.alternateName }})</p>
+  <ul class="site-footer__links">
+    {% for link in person.sameAs %}
+      <li><a href="{{ link }}" rel="me noopener" target="_blank">{{ link }}</a></li>
+    {% endfor %}
+  </ul>
+</footer>
