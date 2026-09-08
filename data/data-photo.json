@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "suryadipta-ghosh",
+    "path": "/photos/suryadipta-ghosh",
+    "title": "Suryadipta Ghosh — Portrait",
+    "filename": "suryadipta-ghosh-portrait-2026.jpg",
+    "alt": "Suryadipta Ghosh, software developer, studio portrait",
+    "caption": "PLACEHOLDER: 1-2 sentence real context for this photo.",
+    "width": 1600,
+    "height": 2000,
+    "dateTaken": "2026-01-01",
+    "location": "",
+    "ogImage": "/images/og/suryadipta-ghosh-portrait-og.jpg"
+  },
+  {
+    "slug": "suryadipta-ghosh-chandigarh",
+    "path": "/photos/suryadipta-ghosh-chandigarh",
+    "title": "Suryadipta Ghosh in Chandigarh",
+    "filename": "suryadipta-ghosh-chandigarh-2026.jpg",
+    "alt": "Suryadipta Ghosh standing in Chandigarh, India",
+    "caption": "PLACEHOLDER: real context — event, trip, or occasion.",
+    "width": 1600,
+    "height": 1067,
+    "dateTaken": "2026-01-01",
+    "location": "Chandigarh, India",
+    "ogImage": "/images/og/suryadipta-ghosh-chandigarh-og.jpg"
+  },
+  {
+    "slug": "suryadipta-ghosh-developer",
+    "path": "/photos/suryadipta-ghosh-developer",
+    "title": "Suryadipta Ghosh at Work",
+    "filename": "suryadipta-ghosh-developer-2026.jpg",
+    "alt": "Suryadipta Ghosh working at a laptop, software developer",
+    "caption": "PLACEHOLDER: real context — what he was building/working on.",
+    "width": 1600,
+    "height": 1067,
+    "dateTaken": "2026-01-01",
+    "location": "",
+    "ogImage": "/images/og/suryadipta-ghosh-developer-og.jpg"
+  }
+]
