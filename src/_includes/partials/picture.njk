@@ -1,0 +1,27 @@
+{% macro responsiveImage(photo) %}
+<picture>
+  <source
+    type="image/avif"
+    srcset="/assets/images/generated/{{ photo.slug }}-480w.avif 480w,
+            /assets/images/generated/{{ photo.slug }}-960w.avif 960w,
+            /assets/images/generated/{{ photo.slug }}-1600w.avif 1600w"
+    sizes="(max-width: 600px) 100vw, 60vw">
+  <source
+    type="image/webp"
+    srcset="/assets/images/generated/{{ photo.slug }}-480w.webp 480w,
+            /assets/images/generated/{{ photo.slug }}-960w.webp 960w,
+            /assets/images/generated/{{ photo.slug }}-1600w.webp 1600w"
+    sizes="(max-width: 600px) 100vw, 60vw">
+  <img
+    src="/assets/images/generated/{{ photo.slug }}-960w.jpeg"
+    srcset="/assets/images/generated/{{ photo.slug }}-480w.jpeg 480w,
+            /assets/images/generated/{{ photo.slug }}-960w.jpeg 960w,
+            /assets/images/generated/{{ photo.slug }}-1600w.jpeg 1600w"
+    sizes="(max-width: 600px) 100vw, 60vw"
+    width="{{ photo.width }}"
+    height="{{ photo.height }}"
+    alt="{{ photo.alt }}"
+    loading="lazy"
+    decoding="async">
+</picture>
+{% endmacro %}
