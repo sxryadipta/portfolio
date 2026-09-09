@@ -4,5 +4,6 @@
     {% for link in person.sameAs %}
       <li><a href="{{ link }}" rel="me noopener" target="_blank">{{ link }}</a></li>
     {% endfor %}
+    <li><a href="{{ person.twitterUrl }}" rel="me noopener" target="_blank">{{ person.twitterCreator }} on X</a></li>
   </ul>
 </footer>

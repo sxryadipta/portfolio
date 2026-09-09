@@ -1,0 +1,30 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  {% for p in siteStructure.corePages %}
+  <url>
+    <loc>{{ site.baseUrl }}{{ p.path }}</loc>
+    <changefreq>{{ p.changefreq }}</changefreq>
+    <priority>{{ p.priority }}</priority>
+  </url>
+  {% endfor %}
+
+  {% for photo in photos %}
+  <url>
+    <loc>{{ site.baseUrl }}{{ photo.path }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>{{ site.baseUrl }}/assets/images/generated/{{ photo.slug }}-1600w.jpeg</image:loc>
+      <image:title>{{ photo.title }}</image:title>
+      <image:caption>{{ photo.caption }}</image:caption>
+    </image:image>
+  </url>
+  {% endfor %}
+
+</urlset>

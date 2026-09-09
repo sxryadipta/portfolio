@@ -3,22 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  {# Full <title>, meta description, canonical, OG, Twitter, JSON-LD land here in Phase 3 #}
-  <title>{{ title or site.defaultTitle }}</title>
-
+  {% include "partials/seo-head.njk" %}
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="icon" href="/favicon.ico">
 </head>
 <body>
   {% include "partials/header.njk" %}
-
   <main id="main-content">
     {{ content | safe }}
   </main>
-
   {% include "partials/footer.njk" %}
-
   <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

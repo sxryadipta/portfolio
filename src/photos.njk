@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: "Photos — Suryadipta Ghosh (@sxryadipta)"
+description: "Photo archive of Suryadipta Ghosh (@sxryadipta) — software developer and VLSI & AI enthusiast."
+canonical: "/photos"
+---
+{% from "partials/picture.njk" import responsiveImage %}
+
+<h1>Photos</h1>
+<p>A small, curated archive.</p>
+
+<div class="photo-grid">
+  {% for photo in photos %}
+    <a class="photo-grid__item" href="{{ photo.path }}">
+      {{ responsiveImage(photo) }}
+      <span class="photo-grid__title">{{ photo.title }}</span>
+    </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,40 @@
+---
+pagination:
+  data: photos
+  size: 1
+  alias: photo
+permalink: "/photos/{{ photo.slug }}/index.html"
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ photo.title }} — Suryadipta Ghosh (@sxryadipta)"
+  description: "{{ photo.caption }}"
+  canonical: "/photos/{{ photo.slug }}/"
+  ogType: "article"
+  ogImage: "{{ photo.ogImage }}"
+  ogImageAlt: "{{ photo.alt }}"
+  jsonLdImage:
+    title: "{{ photo.title }}"
+    caption: "{{ photo.caption }}"
+    contentUrl: "https://sxryadipta.vercel.app/assets/images/generated/{{ photo.slug }}-1600w.jpeg"
+    thumbnailUrl: "https://sxryadipta.vercel.app/assets/images/generated/{{ photo.slug }}-480w.jpeg"
+    width: "{{ photo.width }}"
+    height: "{{ photo.height }}"
+    dateTaken: "{{ photo.dateTaken }}"
+    location: "{{ photo.location }}"
+---
+{% from "partials/picture.njk" import responsiveImage %}
+
+<article class="photo-page">
+  <h1 class="photo-page__title">{{ photo.title }}</h1>
+
+  <figure class="photo-page__figure">
+    {{ responsiveImage(photo) }}
+    <figcaption class="photo-page__caption">{{ photo.caption }}</figcaption>
+  </figure>
+
+  {% if photo.location %}
+    <p class="photo-page__meta">{{ photo.location }}</p>
+  {% endif %}
+
+  <p class="photo-page__back"><a href="/photos">&larr; Back to Photos</a></p>
+</article>
