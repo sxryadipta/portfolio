@@ -1,0 +1,47 @@
+---
+import { identity } from '../data/identity.js';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = `${identity.name} — ${identity.title}`,
+  description = identity.tagline,
+  image = '/og-image.jpg',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
+<meta property="og:url" content={canonicalURL} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.site)} />
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": identity.name,
+  "alternateName": identity.handle,
+  "url": Astro.site?.toString(),
+  "sameAs": [
+    "https://github.com/sxryadipta",
+    "https://twitter.com/surjonomics",
+    "https://linkedin.com/in/sxryadipta",
+    "https://pinterest.com/sxryadipta",
+    "https://instagram.com/sxryadipta"
+  ],
+})} />

@@ -1,0 +1,20 @@
+:root {
+  --bg: #0a0a0a;
+  --bg-soft: #121212;
+  --surface: #1a1a1a;
+  --border: #2a2a2a;
+
+  --text: #ededed;
+  --text-muted: #9a9a9a;
+  --accent: #d4ff3f;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --radius: 10px;
+  --max-width: 900px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+}

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://sxryadipta.vercel.app/sitemap.xml
