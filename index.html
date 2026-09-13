@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suryadipta Ghosh</title>
+  <meta name="description" content="Portfolio of Suryadipta Ghosh, a backend developer building fast, thoughtful web products. Explore projects and writing.">
+  <meta name="theme-color" content="#08080c">
+  <link rel="canonical" href="https://sxryadipta.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Suryafdipta Ghosh, Backend Developer">
+  <meta property="og:description" content="Portfolio of Suryadipta Ghosh, a backend developer building fast, thoughtful web products.">
+  <meta property="og:image" content="https://sxryadipta.vercel.app/assets/sxryadipta.jpg">
+  <meta property="og:url" content="https://sxryadipta.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:,">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- SEO: Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Suryadipta Ghosh",
+    "jobTitle": "Backend Developer",
+    "url": "https://sxryadipta.vercel.app/",
+    "image": "https://sxryadipta.vercel.app/assets/sxryadipta.jpg",
+    "sameAs": [
+      "https://linkedin.com/in/sxryadipta",
+      "https://github.com/sxryadipta",
+      "https://instagram.com/sxryadipta",
+      "https://pinterest.com/sxryadipta",
+      "https://dev.to/sxryadipta"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora-blob blob-1"></span>
+    <span class="aurora-blob blob-2"></span>
+  </div>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#about" class="logo">SG<span class="logo-dot">.</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link active">About</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="#blogs" class="nav-link">Writing</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary btn-sm magnetic">Let's talk</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ABOUT / HERO -->
+    <section id="about" class="section hero container">
+      <div class="hero-text reveal">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="gradient-text">Suryadipta Ghosh</h1>
+        <p class="role">Backend Developer, building for the web</p>
+        <p class="bio">
+          I design and build fast, accessible products end-to-end — from
+          interface to infrastructure. Currently focused on scalable systems.
+        </p>
+
+        <ul class="social-links">
+          <li>
+            <a href="https://linkedin.com/in/sxryadipta" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/sxryadipta" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/sxryadipta" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://pinterest.com/sxryadipta" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.8 2.98 8.9 7.19 10.55-.1-.9-.19-2.28.04-3.26.21-.88 1.34-5.63 1.34-5.63s-.34-.68-.34-1.68c0-1.57.91-2.75 2.04-2.75.96 0 1.43.72 1.43 1.58 0 .96-.61 2.4-.93 3.73-.26 1.11.56 2.02 1.66 2.02 1.99 0 3.52-2.1 3.52-5.12 0-2.68-1.93-4.55-4.68-4.55-3.19 0-5.06 2.39-5.06 4.86 0 .96.37 1.99.83 2.55.09.11.1.21.08.32-.08.35-.27 1.11-.31 1.26-.05.2-.16.24-.37.15-1.38-.64-2.24-2.65-2.24-4.26 0-3.47 2.52-6.66 7.27-6.66 3.82 0 6.79 2.72 6.79 6.36 0 3.79-2.39 6.85-5.71 6.85-1.11 0-2.16-.58-2.52-1.26 0 0-.55 2.1-.68 2.61-.25.95-.91 2.15-1.36 2.88.99.3 2.05.47 3.14.47 6.27 0 11.25-4.98 11.25-11.25S18.27.5 12 .5z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://dev.to/sxryadipta" target="_blank" rel="noopener noreferrer" aria-label="dev.to" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="1" y="3" width="22" height="18" rx="4"/>
+                <text x="12" y="15.5" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="8.5" fill="currentColor" stroke="none">DEV</text>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary magnetic">View my work</a>
+          <a href="/resume.pdf" class="btn btn-ghost magnetic" target="_blank">Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-photo reveal">
+        <div class="photo-card">
+          <div class="photo-card-border"></div>
+          <img
+            src="assets/sxryadipta.jpg"
+            alt="Your Name, full-stack developer, headshot portrait"
+            width="480"
+            height="600"
+            loading="eager"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2 class="section-title">Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="card-spotlight"></div>
+          <div class="project-image">
+            <img src="assets/projects/project-1.jpg" alt="Project One screenshot" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3>Project One</h3>
+            <p>A short, honest description of what this project does and the problem it solves.</p>
+            <ul class="tech-tags">
+              <li>React</li><li>Node.js</li><li>PostgreSQL</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Live demo">Live ↗</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Source code">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-spotlight"></div>
+          <div class="project-image">
+            <img src="assets/projects/project-2.jpg" alt="Project Two screenshot" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3>Project Two</h3>
+            <p>A short, honest description of what this project does and the problem it solves.</p>
+            <ul class="tech-tags">
+              <li>Next.js</li><li>Prisma</li><li>Tailwind</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">Live ↗</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-spotlight"></div>
+          <div class="project-image">
+            <img src="assets/projects/project-3.jpg" alt="Project Three screenshot" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3>Project Three</h3>
+            <p>A short, honest description of what this project does and the problem it solves.</p>
+            <ul class="tech-tags">
+              <li>Vue</li><li>Express</li><li>MongoDB</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">Live ↗</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BLOGS -->
+    <section id="blogs" class="section container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Latest writing</p>
+        <h2 class="section-title">From dev.to</h2>
+      </div>
+
+      <div class="blogs-grid" id="blogsContainer">
+        <!-- skeleton loaders shown until JS replaces them -->
+        <div class="blog-card skeleton"></div>
+        <div class="blog-card skeleton"></div>
+        <div class="blog-card skeleton"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container contact">
+      <div class="reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2 class="section-title">Let's build something</h2>
+        <p class="bio">Open to freelance work, collaborations, and interesting conversations.</p>
+        <a href="mailto:you@example.com" class="btn btn-primary magnetic">you@example.com</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Suryadipta Ghosh. Built with HTML, CSS & JS.</p>
+      <ul class="social-links footer-social">
+        <li><a href="https://linkedin.com/in/sxryadipta" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="https://github.com/sxryadipta" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
+        <li><a href="https://dev.to/sxryadipta" target="_blank" rel="noopener noreferrer" aria-label="dev.to">dev.to</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/devto-feed.js" defer></script>
+</body>
+</html>
